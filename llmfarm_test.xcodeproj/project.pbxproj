@@ -14,6 +14,10 @@
 		682C99422B2A9D7200F74C67 /* llmfarm_testTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682C99412B2A9D7200F74C67 /* llmfarm_testTests.swift */; };
 		682C994C2B2A9D7200F74C67 /* llmfarm_testUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682C994B2B2A9D7200F74C67 /* llmfarm_testUITests.swift */; };
 		682C994E2B2A9D7200F74C67 /* llmfarm_testUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682C994D2B2A9D7200F74C67 /* llmfarm_testUITestsLaunchTests.swift */; };
+		682C99662B2AA29900F74C67 /* llama-2-7b.Q4_K_M.gguf in Resources */ = {isa = PBXBuildFile; fileRef = 682C99652B2AA29900F74C67 /* llama-2-7b.Q4_K_M.gguf */; };
+		682C99672B2AA2ED00F74C67 /* llama-2-7b.Q4_K_M.gguf in Resources */ = {isa = PBXBuildFile; fileRef = 682C99652B2AA29900F74C67 /* llama-2-7b.Q4_K_M.gguf */; };
+		682C99712B2AA93A00F74C67 /* llmfarm_core in Frameworks */ = {isa = PBXBuildFile; productRef = 682C99702B2AA93A00F74C67 /* llmfarm_core */; };
+		682C99802B2B3B5000F74C67 /* mistral-7b-instruct-v0.1.Q4_K_M.gguf in Resources */ = {isa = PBXBuildFile; fileRef = 682C997F2B2B3B4F00F74C67 /* mistral-7b-instruct-v0.1.Q4_K_M.gguf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,10 @@
 		682C99472B2A9D7200F74C67 /* llmfarm_testUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = llmfarm_testUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		682C994B2B2A9D7200F74C67 /* llmfarm_testUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = llmfarm_testUITests.swift; sourceTree = "<group>"; };
 		682C994D2B2A9D7200F74C67 /* llmfarm_testUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = llmfarm_testUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		682C995F2B2AA25300F74C67 /* llama-2-7b.Q4_K_M.gguf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "llama-2-7b.Q4_K_M.gguf"; sourceTree = "<group>"; };
+		682C99652B2AA29900F74C67 /* llama-2-7b.Q4_K_M.gguf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "llama-2-7b.Q4_K_M.gguf"; path = "../../LLMs/llama-2-7b.Q4_K_M.gguf"; sourceTree = "<group>"; };
+		682C99722B2AAB8100F74C67 /* llmfarm_core.swift */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = llmfarm_core.swift; path = ../llmfarm_core.swift; sourceTree = "<group>"; };
+		682C997F2B2B3B4F00F74C67 /* mistral-7b-instruct-v0.1.Q4_K_M.gguf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "mistral-7b-instruct-v0.1.Q4_K_M.gguf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				682C99712B2AA93A00F74C67 /* llmfarm_core in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +83,7 @@
 		682C99242B2A9D7100F74C67 = {
 			isa = PBXGroup;
 			children = (
+				682C995D2B2AA07500F74C67 /* Packages */,
 				682C992F2B2A9D7100F74C67 /* llmfarm_test */,
 				682C99402B2A9D7200F74C67 /* llmfarm_testTests */,
 				682C994A2B2A9D7200F74C67 /* llmfarm_testUITests */,
@@ -94,9 +104,12 @@
 		682C992F2B2A9D7100F74C67 /* llmfarm_test */ = {
 			isa = PBXGroup;
 			children = (
+				682C997F2B2B3B4F00F74C67 /* mistral-7b-instruct-v0.1.Q4_K_M.gguf */,
+				682C99652B2AA29900F74C67 /* llama-2-7b.Q4_K_M.gguf */,
 				682C99302B2A9D7100F74C67 /* llmfarm_testApp.swift */,
 				682C99322B2A9D7100F74C67 /* ContentView.swift */,
 				682C99342B2A9D7200F74C67 /* Assets.xcassets */,
+				682C995F2B2AA25300F74C67 /* llama-2-7b.Q4_K_M.gguf */,
 				682C99362B2A9D7200F74C67 /* Preview Content */,
 			);
 			path = llmfarm_test;
@@ -127,6 +140,14 @@
 			path = llmfarm_testUITests;
 			sourceTree = "<group>";
 		};
+		682C995D2B2AA07500F74C67 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				682C99722B2AAB8100F74C67 /* llmfarm_core.swift */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +164,9 @@
 			dependencies = (
 			);
 			name = llmfarm_test;
+			packageProductDependencies = (
+				682C99702B2AA93A00F74C67 /* llmfarm_core */,
+			);
 			productName = llmfarm_test;
 			productReference = 682C992D2B2A9D7100F74C67 /* llmfarm_test.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +239,9 @@
 				Base,
 			);
 			mainGroup = 682C99242B2A9D7100F74C67;
+			packageReferences = (
+				682C996F2B2AA93A00F74C67 /* XCRemoteSwiftPackageReference "llmfarm_core" */,
+			);
 			productRefGroup = 682C992E2B2A9D7100F74C67 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -232,7 +259,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				682C99382B2A9D7200F74C67 /* Preview Assets.xcassets in Resources */,
+				682C99802B2B3B5000F74C67 /* mistral-7b-instruct-v0.1.Q4_K_M.gguf in Resources */,
 				682C99352B2A9D7200F74C67 /* Assets.xcassets in Resources */,
+				682C99662B2AA29900F74C67 /* llama-2-7b.Q4_K_M.gguf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +269,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				682C99672B2AA2ED00F74C67 /* llama-2-7b.Q4_K_M.gguf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,6 +455,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -454,6 +485,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -583,6 +615,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		682C996F2B2AA93A00F74C67 /* XCRemoteSwiftPackageReference "llmfarm_core" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/guinmoon/llmfarm_core.swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.7.5;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		682C99702B2AA93A00F74C67 /* llmfarm_core */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 682C996F2B2AA93A00F74C67 /* XCRemoteSwiftPackageReference "llmfarm_core" */;
+			productName = llmfarm_core;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 682C99252B2A9D7100F74C67 /* Project object */;
 }
